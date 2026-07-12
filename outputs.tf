@@ -1,3 +1,7 @@
+output "app_configuration_keys_id" {
+  description = "Map of id values across all app_configuration_keys, keyed the same as var.app_configuration_keys"
+  value       = { for k, v in azurerm_app_configuration_key.app_configuration_keys : k => v.id }
+}
 output "app_configuration_keys_configuration_store_id" {
   description = "Map of configuration_store_id values across all app_configuration_keys, keyed the same as var.app_configuration_keys"
   value       = { for k, v in azurerm_app_configuration_key.app_configuration_keys : k => v.configuration_store_id }

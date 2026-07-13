@@ -21,9 +21,9 @@ EOT
     content_type           = optional(string)
     etag                   = optional(string)
     label                  = optional(string)
-    locked                 = optional(bool) # Default: false
+    locked                 = optional(bool)
     tags                   = optional(map(string))
-    type                   = optional(string) # Default: "kv"
+    type                   = optional(string)
     value                  = optional(string)
     vault_key_reference    = optional(string)
   }))
